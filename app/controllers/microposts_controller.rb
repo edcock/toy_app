@@ -10,6 +10,7 @@ class MicropostsController < ApplicationController
   # GET /microposts/1
   # GET /microposts/1.json
   def show
+    @author = User.find(@micropost.user_id).name
   end
 
   # GET /microposts/new
